@@ -91,15 +91,15 @@ rgba(20, 20, 20, 0.95)
     font-size: calc(1em+1%);
 }
 
-.collegamento:link, .collegamento:visited{
+.collegamento{
     color: rgb(144, 129, 73);
+}
 
+.collegamento:link, .collegamento:visited{
     text-decoration: none;
 }
 
 .collegamento:hover, .collegamento:active{
-    color: rgb(144, 129, 73);
-
     text-decoration: underline;
 }
 
@@ -137,7 +137,7 @@ rgba(20, 20, 20, 0.95)
     flex-direction: column;
 }
 
-#intestazione_sopra{
+#header-top{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -147,23 +147,14 @@ rgba(20, 20, 20, 0.95)
     width: 100%;
 }
 
-#intestazione_sotto{
-    height: 50%;
-    width: 100%;
-
-    text-align: center;
-}
-
-
-
-#subheadersx{
+#header-top-left{
     height: 100%;
     width: 50%;
     text-align: center;
 }
 
 
-#subheaderdx{
+#header-top-right{
     height: 100%;
     width: 50%;
 
@@ -173,13 +164,28 @@ rgba(20, 20, 20, 0.95)
     align-items: flex-end;
 }
 
-/* #subheaderdx .collegamento .immagine{
-    height: 1vw;
-    width: 1vw;
-} */
+#header-bottom{
+    height: 50%;
+    width: 100%;
 
-#subheaderdx .collegamento:link, #subheaderdx .collegamento:visited{
-    border: 1px transparent white;
+    text-align: center;
+}
+
+#testo-su-immagine{
+    height: 100%;
+    width: 100%;
+    background-image: url(immagini/EPIKO!!1!.png);
+    background-size: contain;
+    background-position:center;
+    background-repeat: no-repeat;
+}
+
+
+/*come fare per manterene l'immagine contenuta nel box, pur non essendo un link
+nel caso della ricerca*/
+
+#header-top-right .collegamento{
+    border: 1px transparent;
     border-radius: 10px;
     margin-top: 3%;
     margin-bottom: 3%;
@@ -187,31 +193,15 @@ rgba(20, 20, 20, 0.95)
 
     padding: 6px;
 
+    color: rgb(236, 233, 228);
+    text-decoration: none;
+}
+
+#header-top-right .collegamento:link, #header-top-right .collegamento:visited{
     background-color: rgb(144, 129, 73);
-
-    color: rgb(236, 233, 228);
-    text-decoration: none;
 }
-#subheaderdx .collegamento:hover, #subheaderdx .collegamento:active{
+#header-top-right .collegamento:hover, #header-top-right .collegamento:active{
     background-color: rgb(120, 107, 61);
-
-    color: rgb(236, 233, 228);
-    text-decoration: none;
-}
-
-
-
-
-
-#flex_footer{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-
-    text-align: center;
-
-    background-color: rgb(255, 252, 242);
 }
 
 
@@ -321,10 +311,7 @@ rgba(20, 20, 20, 0.95)
     
 }
 
-
-
-.marrone .sezione_desktop .sezione_dx .collegamento:link,
-.marrone .sezione_desktop .sezione_dx .collegamento:visited{
+.marrone .sezione_desktop .sezione_dx .collegamento{
     border: 1px transparent white;
     border-radius: 10px;
     margin-top: 3%;
@@ -333,31 +320,32 @@ rgba(20, 20, 20, 0.95)
 
     padding: 6px;
 
-    background-color: rgb(144, 129, 73);
-
     color: rgb(236, 233, 228);
     
     text-decoration: none;
     text-align: center;
-    
+}
+
+.marrone .sezione_desktop .sezione_dx .collegamento:link,
+.marrone .sezione_desktop .sezione_dx .collegamento:visited{
+    background-color: rgb(144, 129, 73);
 }
 
 .marrone .sezione_desktop .sezione_dx .collegamento:hover,
 .marrone .sezione_desktop .sezione_dx .collegamento:active{
     background-color: rgb(120, 107, 61);
-
-    color: rgb(236, 233, 228);
-    text-decoration: none;
-    /* text-align: center; */ /*anche se non lo metto rimangono così, ???*/
 }
 
 
-#testo-su-immagine{
-    height: 100%;
-    width: 100%;
-    background-image: url(immagini/EPIKO!!1!.png);
-    background-size: contain;
-    background-position:center;
-    background-repeat: no-repeat;
-}
 
+
+#flex_footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    text-align: center;
+
+    background-color: rgb(255, 252, 242);
+}
