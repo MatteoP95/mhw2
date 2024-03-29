@@ -62,7 +62,6 @@ rgba(20, 20, 20, 0.95)
 @media (max-width: 480px){
     body{
         margin: 0 0px;
-        font-size: calc(2rem+5%);
     } 
     .linkbar{
         flex-direction: column;
@@ -71,13 +70,19 @@ rgba(20, 20, 20, 0.95)
         flex-direction: column;
         /*non funziona??*/
     }
+    .titolo{
+        font-size: 3vw;
+    }
+    
+    .sottotitolo{
+        font-size: 2vw;
+    }
 }
 
 
 @media(max-width: 768px) and (min-width:481px){
     body{
         margin: 0 10px;
-        /*non funziona nemmeno??*/
     }
 }
 
@@ -90,6 +95,19 @@ rgba(20, 20, 20, 0.95)
 
     font-size: calc(1em+1%);
 }
+
+.marrone{
+    background-color: rgb(120, 107, 61);
+}
+
+.giallo{
+    background-color:rgb(255, 230, 140);
+}
+
+.bianco{
+    background-color: rgb(255, 252, 242);
+}
+
 
 .collegamento{
     color: rgb(144, 129, 73);
@@ -106,12 +124,12 @@ rgba(20, 20, 20, 0.95)
 
 .titolo{
     color: rgb(236, 233, 228);
-    font-size: 3.5vw;
+    font-size: 2.5vw;
 }
 
 .sottotitolo{
     color: rgb(216, 212, 208);
-    font-size: 2vw;
+    font-size: 1.75vw;
 
     margin-bottom: 5%;
 }
@@ -120,17 +138,6 @@ rgba(20, 20, 20, 0.95)
     font-size: 2rem;
 }
 
-.marrone{
-    background-color: rgb(120, 107, 61);
-}
-
-.giallo{
-    background-color:rgb(255, 230, 140);
-}
-
-.bianco{
-    background-color: rgb(255, 252, 242);
-}
 
 #header{
     display: flex;
@@ -174,7 +181,7 @@ rgba(20, 20, 20, 0.95)
 #testo-su-immagine{
     height: 100%;
     width: 100%;
-    background-image: url(immagini/EPIKO!!1!.png);
+    background-image: url(immagini/Logo1.png);
     background-size: contain;
     background-position:center;
     background-repeat: no-repeat;
@@ -201,6 +208,22 @@ nel caso della ricerca*/
     background-color: rgb(144, 129, 73);
 }
 #header-top-right .collegamento:hover, #header-top-right .collegamento:active{
+    background-color: rgb(120, 107, 61);
+}
+
+#bottone{
+    border: 1px solid rgb(144, 129, 73);
+    border-radius: 10px;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    margin-right: 3%;
+
+    padding: 6px;
+
+    background-color: rgb(144, 129, 73);
+}
+#bottone:hover, #bottone:active{
+    /* border: 1px solid rgb(120, 107, 61); */
     background-color: rgb(120, 107, 61);
 }
 
