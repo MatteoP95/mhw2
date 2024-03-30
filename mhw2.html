@@ -41,7 +41,7 @@
                             <!-- <a class="collegamento" href="">
                                 <i class="fa-solid fa-magnifying-glass" style="color: #d8d4d0;"></i>
                             </a> -->
-                            <button id="bottone">
+                            <button id="bottone_ricerca">
                                 <i class="fa-solid fa-magnifying-glass" style="color: #d8d4d0;"></i>
                             </button>
                         </nav>
@@ -439,6 +439,26 @@
                         <i class="fa-solid fa-image-portrait"></i>
                     </div>
                     <div class="sezione_dx">
+                        <div class="sezione_dx_top">
+                            <!-- <a class="collegamento" href="">
+                                Clicca per espandere: Avventure
+                            </a>
+                            <a class="collegamento">
+                                Clicca per espandere: Ambientazioni
+                            </a> -->
+                            <div class="sezione_bottoni">
+                                <button class="bottone_espansore"
+                                        id="bottone-uno"
+                                        data-number="1">
+                                    Clicca per espandere:<br>Avventure
+                                </button>
+                                <button class="bottone_espansore"
+                                        id="bottone-due"
+                                        data-number="2">
+                                    Clicca per espandere:<br>Ambientazioni
+                                </button>
+                            </div>
+                        </div>
                         <div class="sezione_dx_bottom">
                             <nav class="lista">
                                 <h2>
@@ -483,15 +503,247 @@
                                     </li>
                                 </ul>
                             </nav>
-            
+                            
+
+                            <div class="nascosto"
+                                id="extra-uno"
+                                data-number="1">
+                                <nav class="lista">
+                                    <h2>
+                                        AL: Curse of Strahd
+                                    </h2>
+                                    <li>
+                                        <a class="collegamento" href="">Doppiogiochista del Pugno Nero<a>
+                                    </li>
+                                    <li>
+                                        <a class="collegamento" href="">Ferito dai Draghi<a>
+                                    </li>
+                                    <li>
+                                        <a class="collegamento" href="">Bandito della Via del Ferro<a>
+                                    </li>
+                                    <li>
+                                        <a class="collegamento" href="">Insorgente di Phlan<a>
+                                    </li>
+                                    <li>
+                                        <a class="collegamento" href="">Prigioniero di Stojanow<a>
+                                    </li>
+                                    <li>
+                                        <a class="collegamento" href="">Nomade di Ticklebelly<a>
+                                    </li>
+                                </nav>
+                                <nav class="lista">
+                                    <h2>
+                                        AL: Mulmaster
+                                    </h2>
+                                    <li>
+                                        <a class="collegamento" href="">Specialista di Caravane<a>
+                                    </li>
+                                    <li>
+                                        <a class="collegamento" href="">Minatore di Earthspur<a>
+                                    </li>
+                                    <li>
+                                        <a class="collegamento" href="">Portuale<a>
+                                    </li>
+                                    <li>
+                                        <a class="collegamento" href="">Aristocratico di Mulmaster<a>
+                                    </li>
+                                    <li>
+                                        <a class="collegamento" href="">Rifugiato di Phlan<a>
+                                    </li>
+                                </nav>
+                                <nav class="lista">
+                                    <h2>
+                                        AL: Hillsfar
+                                    </h2>
+                                    <li>
+                                        <a class="collegamento" href="">Rifugiato di Cormanthor<a>
+                                    </li>
+                                    <li>
+                                        <a class="collegamento" href="">Monello del Varco<a>
+                                    </li>
+                                    <li>
+                                        <a class="collegamento" href="">Mercante di Hillsfar<a>
+                                    </li>
+                                    <li>
+                                        <a class="collegamento" href="">Trafficante di Hillsfar<a>
+                                    </li>
+                                    <li>
+                                        <a class="collegamento" href="">Identità segreta<a>
+                                    </li>
+                                    <li>
+                                        <a class="collegamento" href="">Fanatico dell'Ombra<a>
+                                    </li>
+                                    <li>
+                                        <a class="collegamento" href="">Sceriffo del settore<a>
+                                    </li>
+                                </nav>
+                            </div>
                             <nav class="lista">
                                 <h2>
-                                    Tutti gli altri
+                                    Unearthed Arcana
+                                </h2>
+                                Non Disponibili
+                            </nav>
+                            <nav class="lista">
+                                <h2>
+                                    Homebrew
                                 </h2>
                                 <li>
-                                    <a class="collegamento" href="http://dnd5e.wikidot.com/#toc3">(sono troppi e troppo specifici)</a>
+                                    <a class="collegamento" href="http://dnd5e.wikidot.com/background:ashari">Ashari<a>
                                 </li>
-            
+                            </nav>
+
+
+                            <div class="nascosto"
+                                id="extra-due"
+                                data-number="2">
+                                <nav class="lista">
+                                    <h2>
+                                        Acquisitions inc.
+                                    </h2>
+                                    <li>
+                                        <a class="collegamento" href="">Erede del famoso avventuriero<a>
+                                    </li>
+                                    <li>
+                                        <a class="collegamento" href="">Mercante fallito<a>
+                                    </li>
+                                    <li>
+                                        <a class="collegamento" href="">Giocatore d'azzardo<a>
+                                    </li>
+                                    <li>
+                                        <a class="collegamento" href="">Querelante<a>
+                                    </li>
+                                    <li>
+                                        <a class="collegamento" href="">Stagista rivale<a>
+                                    </li>
+                                </nav>
+                                <nav class="lista">
+                                    <h2>
+                                        Amonkhet
+                                    </h2>
+                                    <li>
+                                        <a class="collegamento" href="">Dissidente<a>
+                                    </li>
+                                    <li>
+                                        <a class="collegamento" href="">Iniziato<a>
+                                    </li>
+                                    <li>
+                                        <a class="collegamento" href="">Visir<a>
+                                    </li>
+                                </nav>
+                                <nav class="lista">
+                                    <h2>
+                                        Dragonlance
+                                    </h2>
+                                    <li>
+                                        <a class="collegamento" href="">Cavaliere di Solamnia<a>
+                                    </li>
+                                    <li>
+                                        <a class="collegamento" href="">Mago dell'Alta Stregoneria<a>
+                                    </li>
+                                </nav>
+                                <nav class="lista">
+                                    <h2>
+                                        Innistrad
+                                    </h2>
+                                    <li>
+                                        <a class="collegamento" href="">Inquisitore<a>
+                                    </li>
+                                </nav>
+                                <nav class="lista">
+                                    <h2>
+                                        Planescape
+                                    </h2>
+                                    <li>
+                                        <a class="collegamento" href="">Guardiano del Varco<a>
+                                    </li>
+                                    <li>
+                                        <a class="collegamento" href="">Filosofo Planare<a>
+                                    </li>
+                                </nav>
+                                <nav class="lista">
+                                    <h2>
+                                        Ravnica
+                                    </h2>
+                                    <li>
+                                        <a class="collegamento" href="">Funzionario di Azorius<a>
+                                    </li>
+                                    <li>
+                                        <a class="collegamento" href="">Legionario di Boros<a>
+                                    </li>
+                                    <li>
+                                        <a class="collegamento" href="">Operativo di Dimir<a>
+                                    </li>
+                                    <li>
+                                        <a class="collegamento" href="">Agente di Golgari<a>
+                                    </li>
+                                    <li>
+                                        <a class="collegamento" href="">Anarchico di Gruul<a>
+                                    </li>
+                                    <li>
+                                        <a class="collegamento" href="">Ignegnere di Izzet<a>
+                                    </li>
+                                    <li>
+                                        <a class="collegamento" href="">Rappresentante di Orzhov<a>
+                                    </li>
+                                    <li>
+                                        <a class="collegamento" href="">Cultista di Rakdos<a>
+                                    </li>
+                                    <li>
+                                        <a class="collegamento" href="">Iniziato a Selesnya<a>
+                                    </li>
+                                    <li>
+                                        <a class="collegamento" href="">Scienziato di Simic<a>
+                                    </li>
+                                </nav>
+                                <nav class="lista">
+                                    <h2>
+                                        Strixhaven
+                                    </h2>
+                                    <li>
+                                        <a class="collegamento" href="">Studente di Lorehold<a>
+                                    </li>
+                                    <li>
+                                        <a class="collegamento" href="">Studente di Prismari<a>
+                                    </li>
+                                    <li>
+                                        <a class="collegamento" href="">Studente di Quandrix<a>
+                                    </li>
+                                    <li>
+                                        <a class="collegamento" href="">Studente di Silverquill<a>
+                                    </li>
+                                    <li>
+                                        <a class="collegamento" href="">Studente di Witherbloom<a>
+                                    </li>
+                                </nav>
+                                <nav class="lista">
+                                    <h2>
+                                        Wildemount
+                                    </h2>
+                                    <li>
+                                        <a class="collegamento" href="">Grinner<a>
+                                    </li>
+                                    <li>
+                                        <a class="collegamento" href="">Agente Volstrucker<a>
+                                    </li>
+                                </nav>
+                                <nav class="lista">
+                                    <h2>
+                                        Spelljammer
+                                    </h2>
+                                    <li>
+                                        <a class="collegamento" href="http://dnd5e.wikidot.com/background:astral-drifter">Vagante Astrale<a>
+                                    </li>
+                                    
+                                    <li>
+                                        <a class="collegamento" href="http://dnd5e.wikidot.com/background:wildspacer">Wildspacer<a>
+                                    </li>
+                                </nav>
+                            </div>
+                            <nav class="lista">
+                                <h2>
+                                    <a class="collegamento" href="http://dnd5e.wikidot.com/background:optional-features">Opzionali<a>
+                                </h2>
                             </nav>
                         </div>
                     </div>
@@ -591,9 +843,6 @@
                     </div>
     
                     <div class="sezione_dx">
-                        <div class="sezione_dx_top">
-    
-                        </div>
                         <div class="sezione_dx_bottom">
                             <nav class="lista">
                                 <h2>

@@ -1,5 +1,5 @@
 
-
+// sezione barra di ricerca
 const ricerca=document.createElement('input');
 ricerca.type='text';
 
@@ -29,14 +29,16 @@ function ricerca_to_bottone(event){
     container.addEventListener("click", bottone_to_ricerca);
 }
 
-const bottone = document.querySelector("#bottone");
+const bottone = document.querySelector("#bottone_ricerca");
 
 bottone.addEventListener('click', bottone_to_ricerca);
 
 
+// sezione logo variabile
+
 // const dice_url='https://media.tenor.com/mgLvfJ4Zk5cAAAAi/jp-jamesperrett.gif';
 //non funziona come parametro?
-
+//https://media1.tenor.com/m/n9Hl8cEdNV4AAAAC/ricardo-milos.gif
 //non funziona
 function appearingGif(event){
     console.log("bravo, ci sei sopra");
@@ -61,3 +63,88 @@ function disappearingGif(event){
 const logo=document.querySelector("#testo-su-immagine");
 
 logo.addEventListener("mouseover", appearingGif);
+
+
+// sezione bottoni
+
+const bottone_uno=document.querySelector("#bottone-uno");
+const bottone_due=document.querySelector("#bottone-due");
+
+bottone_uno.addEventListener("click", onClick1);
+bottone_due.addEventListener("click", onClick2);
+
+function onClick1(event){
+    console.log("bottone1 attivato");
+
+    const aux=event.currentTarget;
+
+    const hidden=document.querySelector("#extra-uno");
+
+    hidden.classList.remove("nascosto");
+    hidden.classList.add("extra");
+
+
+    bottone_uno.textContent="Clicca per comprimere:"+"<br>"+"Avventure"
+
+    aux.removeEventListener("click", onClick1);
+    aux.addEventListener("click", deOnClick1);
+}
+
+function deOnClick1(event){
+    console.log("bottone1 disattivato");
+
+    const aux=event.currentTarget;
+
+    const hidden=document.querySelector("#extra-uno");
+
+    hidden.classList.remove("extra");
+    hidden.classList.add("nascosto");
+
+
+    bottone_uno.textContent="Clicca per espandere:"+"<br>"+"Avventure"
+
+
+    aux.removeEventListener("click", deOnClick1);
+    aux.addEventListener("click", onClick1);
+}
+
+function onClick2(event){
+    console.log("bottone2 attivato");
+
+    const aux=event.currentTarget;
+
+    const hidden=document.querySelector("#extra-due");
+
+    hidden.classList.remove("nascosto");
+    hidden.classList.add("extra");
+
+    bottone_due.textContent="Clicca per comprimere:"+"<br>"+"Ambientazioni"
+
+    aux.removeEventListener("click", onClick2);
+    aux.addEventListener("click", deOnClick2);
+}
+
+function deOnClick2(event){
+    console.log("bottone2 disattivato");
+
+    const aux=event.currentTarget;
+
+    const hidden=document.querySelector("#extra-due");
+
+    hidden.classList.remove("extra");
+    hidden.classList.add("nascosto");
+    
+    bottone_due.textContent="Clicca per espandere:"+"<br>"+"Ambientazioni"
+
+
+    aux.removeEventListener("click", deOnClick2);
+    aux.addEventListener("click", onClick2);
+}
+
+
+// const button_map = {
+//      : 
+//      vorrei creare una mappa che associ bottoni a extra (b1 con ex1...)
+//      per creare solo due funzioni: onClick e deOnClick
+//      al posto di averne 4...
+// }
