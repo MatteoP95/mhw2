@@ -68,6 +68,7 @@ rgba(20, 20, 20, 0.95)
     }
     .sezione_desktop{
         flex-direction: column;
+        padding: 1% 0;
         /*non funziona??*/
     }
     .titolo{
@@ -284,7 +285,7 @@ nel caso della ricerca*/
 
 .sezione_desktop{
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
     justify-content: center;
     align-items: center;
 }
@@ -324,7 +325,7 @@ nel caso della ricerca*/
     width: 100%;
     height: 50%;
 
-    margin: 1%;
+    margin: 1% 0;
 }
 
 
@@ -349,6 +350,7 @@ nel caso della ricerca*/
     margin-bottom: 3%;
     margin-right: 3%;
 
+
     padding: 6px;
 
     color: rgb(236, 233, 228);
@@ -359,12 +361,19 @@ nel caso della ricerca*/
 
 .marrone .sezione_desktop .sezione_dx .collegamento:link,
 .marrone .sezione_desktop .sezione_dx .collegamento:visited{
+    border: 2px solid #422800;
+    box-shadow: #422800 4px 4px 0 0;
+
     background-color: rgb(144, 129, 73);
 }
 
-.marrone .sezione_desktop .sezione_dx .collegamento:hover,
+.marrone .sezione_desktop .sezione_dx .collegamento:hover{
+    background-color: rgb(94, 82, 40);
+}
+
 .marrone .sezione_desktop .sezione_dx .collegamento:active{
-    background-color: rgb(120, 107, 61);
+    box-shadow: #422800 2px 2px 0 0;
+    transform: translate(2px, 2px);
 }
 
 
@@ -387,7 +396,10 @@ nel caso della ricerca*/
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
+
+    height: fit-content;
+    width: fit-content;
 }
 
 .nascosto{
@@ -418,8 +430,8 @@ nel caso della ricerca*/
     padding: 0 18px;
     line-height: 50px;
     text-align: center;
-    /* text-decoration: none;
-    user-select: none;
+    text-decoration: none;
+    /*user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation; */
 
@@ -429,6 +441,13 @@ nel caso della ricerca*/
     padding: 0.5%;*/
     margin: 0.5% 0; 
 }
+#extra-uno{
+    background-color: blueviolet;
+}
+#extra-due{
+    background-color: red;
+}
+
 .bottone_espansore:hover{
     background-color:rgb(255, 219, 87);
 }
@@ -439,5 +458,13 @@ nel caso della ricerca*/
 
 
 
+#ricardo{
+    border: 0px transparent;
+    background-color: rgb(120, 107, 61);
+    cursor: pointer;
 
+    margin: 3%;
+
+    color: rgb(120, 107, 61);
+}
 

@@ -38,7 +38,6 @@ bottone.addEventListener('click', bottone_to_ricerca);
 
 // const dice_url='https://media.tenor.com/mgLvfJ4Zk5cAAAAi/jp-jamesperrett.gif';
 //non funziona come parametro?
-//https://media1.tenor.com/m/n9Hl8cEdNV4AAAAC/ricardo-milos.gif
 //non funziona
 function appearingGif(event){
     console.log("bravo, ci sei sopra");
@@ -148,3 +147,37 @@ function deOnClick2(event){
 //      per creare solo due funzioni: onClick e deOnClick
 //      al posto di averne 4...
 // }
+
+
+// ricardo
+//https://media1.tenor.com/m/n9Hl8cEdNV4AAAAC/ricardo-milos.gif NON USARE
+//https://media.giphy.com/media/IfrfAy8zbHnPfUIWki/giphy.gif?cid=790b7611prqky8etsfbeb81ye3bz4ydznxnassu6ywog3w71&ep=v1_gifs_search&rid=giphy.gif&ct=g
+
+const ricardo_button=document.querySelector("#ricardo");
+ricardo_button.addEventListener("click", ricardo_function);
+
+const ricardo_img=document.createElement('img');
+ricardo_img.setAttribute('src', 'https://media.giphy.com/media/IfrfAy8zbHnPfUIWki/giphy.gif?cid=790b7611prqky8etsfbeb81ye3bz4ydznxnassu6ywog3w71&ep=v1_gifs_search&rid=giphy.gif&ct=g')
+
+function ricardo_function(event){
+    console.log("RICARDO");
+
+    const ricardo=event.currentTarget;
+
+    ricardo.appendChild(ricardo_img);
+
+    ricardo.removeEventListener("click", ricardo_function);
+    ricardo.addEventListener("click", tooSexy);
+}
+
+function tooSexy(event){
+    console.log("too hot to handle");
+
+    const ricardo=event.currentTarget;
+
+    ricardo.removeChild(ricardo_img);
+    ricardo.innerHTML="";
+
+    ricardo.removeEventListener("click", tooSexy);
+    // ricardo.addEventListener("click", ricardo_function);
+}
