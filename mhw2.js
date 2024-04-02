@@ -8,25 +8,31 @@ const lente= document.querySelector(".fa-solid fa-magnifying-glass")
 function bottone_to_ricerca(event){
     console.log("ricerca attiva");
 
-    const container=event.currentTarget;
+    // const container=event.currentTarget;
 
 
-    // container.remove("#button");
+    // // container.remove("#button");
 
-    container.appendChild(ricerca);
-    // container.removeChild(lente)//lente non funziona
-    container.removeEventListener("click", bottone_to_ricerca);
-    container.addEventListener("dblclick", ricerca_to_bottone);
+    // container.appendChild(ricerca);
+    // container.removeEventListener("click", bottone_to_ricerca);
+    // container.addEventListener("dblclick", ricerca_to_bottone);
+
+    bottone.appendChild(ricerca);
+    bottone.removeEventListener("click", bottone_to_ricerca);
+    ricerca.addEventListener("focusout", ricerca_to_bottone);
 }
 
 function ricerca_to_bottone(event){
     console.log("ritorno al default");
 
-    const container=event.currentTarget;
-    container.removeChild(ricerca);
-    // container.appendChild(lente);
-    container.removeEventListener("dblclick",  ricerca_to_bottone);
-    container.addEventListener("click", bottone_to_ricerca);
+    // const container=event.currentTarget;
+    // container.removeChild(ricerca);
+    // container.removeEventListener("dblclick",  ricerca_to_bottone);
+    // container.addEventListener("click", bottone_to_ricerca);
+
+    ricerca.removeEventListener("focusout", ricerca_to_bottone);
+    bottone.addEventListener("click", bottone_to_ricerca);
+    ricerca.parentNode.removeChild(ricerca);
 }
 
 const bottone = document.querySelector("#bottone_ricerca");

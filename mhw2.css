@@ -69,8 +69,24 @@ rgba(20, 20, 20, 0.95)
     .sezione_desktop{
         flex-direction: column;
         padding: 1% 0;
-        /*non funziona??*/
     }
+    .sezione_desktop .sezione_sx{
+        margin-top: 5%;
+    }
+    .sezione_desktop .sezione_dx .sezione_dx_bottom .titolo{
+        font-size: 5vw;
+    }
+
+    /* .icona_con_testo i, .sezione_sx i{
+        font-size: 12vw;
+    }
+    
+    .icona_con_testo .collegamento{
+        font-size: 4vw;
+    } */
+    /* ho raddoppiato le dimensioni ma non cambia nulla
+    */
+
     .titolo{
         font-size: 3vw;
     }
@@ -166,6 +182,8 @@ rgba(20, 20, 20, 0.95)
     height: 100%;
     width: 50%;
     text-align: center;
+
+    /* width: fit-content;  come fare?*/
 }
 
 
@@ -174,6 +192,7 @@ rgba(20, 20, 20, 0.95)
     width: 50%;
 
     display: flex;
+    /* flex-grow: ; potrei usarlo? */
     flex-direction: column;
     justify-content: space-around;
     align-items: flex-end;
@@ -195,9 +214,6 @@ rgba(20, 20, 20, 0.95)
     background-repeat: no-repeat;
 }
 
-
-/*come fare per manterene l'immagine contenuta nel box, pur non essendo un link
-nel caso della ricerca*/
 
 #header-top-right .collegamento{
     border: 1px transparent;
@@ -231,7 +247,6 @@ nel caso della ricerca*/
     background-color: rgb(144, 129, 73);
 }
 #bottone_ricerca:hover, #bottone_ricerca:active{
-    /* border: 1px solid rgb(120, 107, 61); */
     background-color: rgb(120, 107, 61);
     cursor: pointer;
 }
@@ -285,7 +300,6 @@ nel caso della ricerca*/
 
 .sezione_desktop{
     display: flex;
-    /* flex-direction: row; */
     justify-content: center;
     align-items: center;
 }
@@ -319,7 +333,6 @@ nel caso della ricerca*/
 
 .sezione_dx_bottom{/*sottoliste*/
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
 
     width: 100%;
@@ -340,10 +353,21 @@ nel caso della ricerca*/
 
 .sottolista{
     list-style-type:circle;
-    
 }
 
-.marrone .sezione_desktop .sezione_dx .collegamento{
+/* .marrone .sezione_desktop .sezione_dx .sezione_dx_bottom{
+    justify-content: center;
+        appena specifico width si sposta a sinistra, troppo grande?
+
+}
+
+.marrone .sezione_desktop .sezione_dx .sezione_dx_bottom #ricardo{
+    justify-content: center;
+    
+} */
+
+
+.marrone .sezione_desktop .sezione_dx .sezione_dx_bottom .collegamento{
     border: 1px transparent white;
     border-radius: 10px;
     margin-top: 3%;
@@ -359,22 +383,24 @@ nel caso della ricerca*/
     text-align: center;
 }
 
-.marrone .sezione_desktop .sezione_dx .collegamento:link,
-.marrone .sezione_desktop .sezione_dx .collegamento:visited{
+.marrone .sezione_desktop .sezione_dx .sezione_dx_bottom .collegamento:link,
+.marrone .sezione_desktop .sezione_dx .sezione_dx_bottom .collegamento:visited{
     border: 2px solid #422800;
     box-shadow: #422800 4px 4px 0 0;
 
     background-color: rgb(144, 129, 73);
 }
 
-.marrone .sezione_desktop .sezione_dx .collegamento:hover{
+.marrone .sezione_desktop .sezione_dx .sezione_dx_bottom .collegamento:hover{
     background-color: rgb(94, 82, 40);
 }
 
-.marrone .sezione_desktop .sezione_dx .collegamento:active{
+.marrone .sezione_desktop .sezione_dx .sezione_dx_bottom .collegamento:active{
     box-shadow: #422800 2px 2px 0 0;
     transform: translate(2px, 2px);
 }
+
+
 
 
 
@@ -417,7 +443,6 @@ nel caso della ricerca*/
 }
 
 .bottone_espansore{
-    /* background-color: #fbeee0; */
     background-color: rgb(255, 223, 107);
     border: 2px solid #422800;
     border-radius: 30px;
@@ -431,14 +456,8 @@ nel caso della ricerca*/
     line-height: 50px;
     text-align: center;
     text-decoration: none;
-    /*user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation; */
+    touch-action: manipulation;
 
-    /* width: fit-content;
-    //specifiche per bottone base
-    //rimpiazzate da bottone decorato
-    padding: 0.5%;*/
     margin: 0.5% 0; 
 }
 #extra-uno{
@@ -463,8 +482,9 @@ nel caso della ricerca*/
     background-color: rgb(120, 107, 61);
     cursor: pointer;
 
-    margin: 3%;
+    margin: 3% 0%;
 
     color: rgb(120, 107, 61);
 }
+
 
