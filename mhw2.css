@@ -355,10 +355,13 @@ rgba(20, 20, 20, 0.95)
     list-style-type:circle;
 }
 
-/* .marrone .sezione_desktop .sezione_dx .sezione_dx_bottom{
-    justify-content: center;
-        appena specifico width si sposta a sinistra, troppo grande?
 
+/* 
+    appena specifico width si sposta a sinistra, troppo grande?
+
+.marrone .sezione_desktop .sezione_dx .sezione_dx_bottom .lista{
+    justify-content: center;
+    flex-grow: 0;
 }
 
 .marrone .sezione_desktop .sezione_dx .sezione_dx_bottom #ricardo{

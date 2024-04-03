@@ -8,14 +8,6 @@ const lente= document.querySelector(".fa-solid fa-magnifying-glass")
 function bottone_to_ricerca(event){
     console.log("ricerca attiva");
 
-    // const container=event.currentTarget;
-
-
-    // // container.remove("#button");
-
-    // container.appendChild(ricerca);
-    // container.removeEventListener("click", bottone_to_ricerca);
-    // container.addEventListener("dblclick", ricerca_to_bottone);
 
     bottone.appendChild(ricerca);
     bottone.removeEventListener("click", bottone_to_ricerca);
@@ -25,10 +17,7 @@ function bottone_to_ricerca(event){
 function ricerca_to_bottone(event){
     console.log("ritorno al default");
 
-    // const container=event.currentTarget;
-    // container.removeChild(ricerca);
-    // container.removeEventListener("dblclick",  ricerca_to_bottone);
-    // container.addEventListener("click", bottone_to_ricerca);
+
 
     ricerca.removeEventListener("focusout", ricerca_to_bottone);
     bottone.addEventListener("click", bottone_to_ricerca);
@@ -44,7 +33,7 @@ bottone.addEventListener('click', bottone_to_ricerca);
 
 // const dice_url='https://media.tenor.com/mgLvfJ4Zk5cAAAAi/jp-jamesperrett.gif';
 //non funziona come parametro?
-//non funziona
+
 function appearingGif(event){
     console.log("bravo, ci sei sopra");
 
@@ -156,7 +145,6 @@ function deOnClick2(event){
 
 
 // ricardo
-//https://media1.tenor.com/m/n9Hl8cEdNV4AAAAC/ricardo-milos.gif NON USARE
 //https://media.giphy.com/media/IfrfAy8zbHnPfUIWki/giphy.gif?cid=790b7611prqky8etsfbeb81ye3bz4ydznxnassu6ywog3w71&ep=v1_gifs_search&rid=giphy.gif&ct=g
 
 const ricardo_button=document.querySelector("#ricardo");
@@ -170,7 +158,7 @@ function ricardo_function(event){
 
     const ricardo=event.currentTarget;
 
-    ricardo.appendChild(ricardo_img);
+    ricardo.parentNode.appendChild(ricardo_img);
 
     ricardo.removeEventListener("click", ricardo_function);
     ricardo.addEventListener("click", tooSexy);
@@ -181,9 +169,8 @@ function tooSexy(event){
 
     const ricardo=event.currentTarget;
 
-    ricardo.removeChild(ricardo_img);
+    ricardo.parentNode.removeChild(ricardo_img);
     ricardo.innerHTML="";
 
     ricardo.removeEventListener("click", tooSexy);
-    // ricardo.addEventListener("click", ricardo_function);
 }
