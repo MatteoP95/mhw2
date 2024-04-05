@@ -283,7 +283,7 @@ rgba(20, 20, 20, 0.95)
 }
 
 .icona_con_testo i, .sezione_sx i{
-    font-size: 6vw;
+    font-size: 6vw;/*cosa usare, em o vw?*/
 }
 
 .icona_con_testo .collegamento{

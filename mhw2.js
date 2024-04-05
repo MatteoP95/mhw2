@@ -61,87 +61,49 @@ logo.addEventListener("mouseover", appearingGif);
 
 // sezione bottoni
 
+
+
+
 const bottone_uno=document.querySelector("#bottone-uno");
 const bottone_due=document.querySelector("#bottone-due");
 
-bottone_uno.addEventListener("click", onClick1);
-bottone_due.addEventListener("click", onClick2);
-
-function onClick1(event){
-    console.log("bottone1 attivato");
-
-    const aux=event.currentTarget;
-
-    const hidden=document.querySelector("#extra-uno");
-
-    hidden.classList.remove("nascosto");
-    hidden.classList.add("extra");
+bottone_uno.addEventListener("click", onClick);
+bottone_due.addEventListener("click", onClick);
 
 
-    bottone_uno.textContent="Clicca per comprimere:"+"<br>"+"Avventure"
+// const bottoni=document.querySelectorAll(".bottone_espansore");
 
-    aux.removeEventListener("click", onClick1);
-    aux.addEventListener("click", deOnClick1);
-}
-
-function deOnClick1(event){
-    console.log("bottone1 disattivato");
-
-    const aux=event.currentTarget;
-
-    const hidden=document.querySelector("#extra-uno");
-
-    hidden.classList.remove("extra");
-    hidden.classList.add("nascosto");
+// for(let x=0; x<bottoni.length; x++ ){
+//     bottoni[x]=addEventListener("click", onClick);
+// } // //non conosce il dataset di un elemento dell'array
 
 
-    bottone_uno.textContent="Clicca per espandere:"+"<br>"+"Avventure"
 
+function onClick(event){
 
-    aux.removeEventListener("click", deOnClick1);
-    aux.addEventListener("click", onClick1);
-}
+    const aux=event.currentTarget.dataset.button;
+    // let id = aux.dataset.button;
 
-function onClick2(event){
-    console.log("bottone2 attivato");
-
-    const aux=event.currentTarget;
-
-    const hidden=document.querySelector("#extra-due");
-
-    hidden.classList.remove("nascosto");
-    hidden.classList.add("extra");
-
-    bottone_due.textContent="Clicca per comprimere:"+"<br>"+"Ambientazioni"
-
-    aux.removeEventListener("click", onClick2);
-    aux.addEventListener("click", deOnClick2);
-}
-
-function deOnClick2(event){
-    console.log("bottone2 disattivato");
-
-    const aux=event.currentTarget;
-
-    const hidden=document.querySelector("#extra-due");
-
-    hidden.classList.remove("extra");
-    hidden.classList.add("nascosto");
+    const element = document.querySelector('[data-content="' + aux + '"]');
+    // const class_name = element.getAttribute("class");
     
-    bottone_due.textContent="Clicca per espandere:"+"<br>"+"Ambientazioni"
+    // if(class_name === "nascosto"){
+    //     console.log("bottone attivato");
 
+    //     element.classList.remove('nascosto');
+    //     element.classList.add('extra');
+    // }
+    // else{
+    //     console.log("bottone disattivato");
 
-    aux.removeEventListener("click", deOnClick2);
-    aux.addEventListener("click", onClick2);
+    //     element.classList.add('nascosto');
+    //     element.classList.remove('extra');
+    // }
+    element.classList.toggle('nascosto');
+    element.classList.toggle('extra');
+    console.log(element.className);
 }
 
-
-// const button_map = {
-//      : 
-//      vorrei creare una mappa che associ bottoni a extra (b1 con ex1...)
-//      per creare solo due funzioni: onClick e deOnClick
-//      al posto di averne 4...
-// }
 
 
 // ricardo
@@ -149,16 +111,25 @@ function deOnClick2(event){
 
 const ricardo_button=document.querySelector("#ricardo");
 ricardo_button.addEventListener("click", ricardo_function);
+// ricardo_button.addEventListener("click", ricardo_ricardo);
+
 
 const ricardo_img=document.createElement('img');
 ricardo_img.setAttribute('src', 'https://media.giphy.com/media/IfrfAy8zbHnPfUIWki/giphy.gif?cid=790b7611prqky8etsfbeb81ye3bz4ydznxnassu6ywog3w71&ep=v1_gifs_search&rid=giphy.gif&ct=g')
+// ricardo_img.src=url('https://media.giphy.com/media/IfrfAy8zbHnPfUIWki/giphy.gif?cid=790b7611prqky8etsfbeb81ye3bz4ydznxnassu6ywog3w71&ep=v1_gifs_search&rid=giphy.gif&ct=g
+// ');
 
 function ricardo_function(event){
     console.log("RICARDO");
 
     const ricardo=event.currentTarget;
 
+    console.log(ricardo.parentNode.childNodes); //33
+
     ricardo.parentNode.appendChild(ricardo_img);
+    
+    console.log(ricardo.parentNode.childNodes); //34
+
 
     ricardo.removeEventListener("click", ricardo_function);
     ricardo.addEventListener("click", tooSexy);
@@ -174,3 +145,19 @@ function tooSexy(event){
 
     ricardo.removeEventListener("click", tooSexy);
 }
+
+// function ricardo_ricardo(event){
+//     console.log("RICARDO RICARDO");
+
+//     const ricardo=event.currentTarget;
+
+//     if(console.log(ricardo.parentNode.childElementCount)===33){ //ritorna 17?
+//         ricardo.parentNode.appendChild(ricardo_img);
+//     }
+//     else{
+//         ricardo.parentNode.removeChild(ricardo_img);
+//         ricardo.innerHTML="";
+//         ricardo.removeEventListener("click", ricardo_ricardo);
+//     }
+
+// }
