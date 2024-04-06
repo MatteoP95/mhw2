@@ -82,25 +82,20 @@ bottone_due.addEventListener("click", onClick);
 function onClick(event){
 
     const aux=event.currentTarget.dataset.button;
-    // let id = aux.dataset.button;
 
     const element = document.querySelector('[data-content="' + aux + '"]');
-    // const class_name = element.getAttribute("class");
-    
-    // if(class_name === "nascosto"){
-    //     console.log("bottone attivato");
 
-    //     element.classList.remove('nascosto');
-    //     element.classList.add('extra');
-    // }
-    // else{
-    //     console.log("bottone disattivato");
+    console.log(element.dataset.context)
 
-    //     element.classList.add('nascosto');
-    //     element.classList.remove('extra');
-    // }
+    if(element.className === "nascosto"){
+        event.currentTarget.textContent="Clicca per nascondere:"+ element.dataset.context;
+    }
+    else{
+        event.currentTarget.textContent="Clicca per espandere:"+ element.dataset.context;
+    }
+
     element.classList.toggle('nascosto');
-    element.classList.toggle('extra');
+    element.classList.toggle('espanso');
     console.log(element.className);
 }
 

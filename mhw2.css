@@ -430,6 +430,14 @@ rgba(20, 20, 20, 0.95)
     height: fit-content;
     width: fit-content;
 }
+#extra-uno{
+    /* background-color: rgb(216, 192, 104); */
+    background-color: rgb(255, 219, 87);
+}
+#extra-due{
+    /* background-color: rgb(231, 201, 91); */
+    background-color: rgb(255, 219, 87);
+}
 
 .nascosto{
     display: none;
@@ -463,12 +471,7 @@ rgba(20, 20, 20, 0.95)
 
     margin: 0.5% 0; 
 }
-#extra-uno{
-    background-color: blueviolet;
-}
-#extra-due{
-    background-color: red;
-}
+
 
 .bottone_espansore:hover{
     background-color:rgb(255, 219, 87);
