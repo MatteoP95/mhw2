@@ -1,5 +1,5 @@
-
 // sezione barra di ricerca
+
 const ricerca=document.createElement('input');
 ricerca.type='text';
 
@@ -27,6 +27,7 @@ function ricerca_to_bottone(event){
 const bottone = document.querySelector("#bottone_ricerca");
 
 bottone.addEventListener('click', bottone_to_ricerca);
+
 
 
 // sezione logo variabile
@@ -59,10 +60,8 @@ const logo=document.querySelector("#testo-su-immagine");
 logo.addEventListener("mouseover", appearingGif);
 
 
+
 // sezione bottoni
-
-
-
 
 const bottone_uno=document.querySelector("#bottone-uno");
 const bottone_due=document.querySelector("#bottone-due");
